@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# Allow direct access to image files
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Rewrite other requests to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ src/index.php [QSA,L]

@@ -1,0 +1,24 @@
+{
+  "name": "vendor/mvc",
+  "description": "Build MVC with PHP",
+  "type": "project",
+  "require": {
+    "ramsey/uuid": "^4.7"
+  },
+  "license": "no",
+  "autoload": {
+    "psr-4": {
+      "App\\Abstraction\\": "app/abstractions",
+      "App\\Abstraction\\Exception\\": "app/abstractions/exception",
+      "App\\Controller\\": "app/controllers",
+      "App\\Modal\\": "app/modals",
+      "App\\Util\\": "app/utils",
+      "App\\View\\": "app/views"
+    }
+  },
+  "authors": [
+    {
+      "name": "Love you"
+    }
+  ]
+}
