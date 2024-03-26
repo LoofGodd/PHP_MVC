@@ -1,7 +1,7 @@
 # MVC Assignment Project
 I have developed this website using the MVC pattern in PHP for my teacher.
 
-**[Demo]([https://www.example.com](https://youtu.be/Yum6ThUalzk))**
+**[Demo](https://youtu.be/Yum6ThUalzk)**
 
 # Setup
 1. Firstly, create a virtual host (vhost) with the DocumentRoot set to the absolute path of the project. For example, /..AbsolutePath/src.
