@@ -82,9 +82,10 @@ class MVCModal{
             $query = "SELECT id FROM $this->table";
             $stmt = $this->conn->prepare($query);
            $data =  $this->is_execute($stmt);
+        var_dump($data);
             $ids = [];
            foreach ($data['data'] as  $value) {
-            $ids[] = $value['id'];
+            $ids[] = $value['id'] ?? $value;
            }
         $data['data'] = $ids;
         return $data;
@@ -140,8 +141,6 @@ class MVCModal{
                 return ['status' => 'error'];
             }
             $ids = $this->getAllID()['data'];
-        echo "<pre>";
-        var_dump($ids);
             if (!in_array($data["id"], $ids)) {
                 return ['status' => 'error',];
             }

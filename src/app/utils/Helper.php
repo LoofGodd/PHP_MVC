@@ -27,7 +27,6 @@ public static function pagination(array $items, int $itemPerPage) {
         header("location:" . createOrUpdateParams(PAGINATION."=$currentPage"));
         exit;
     }
-
     $startItem = $currentPage == 1 ? 1 :($currentPage-1) * $itemPerPage + 1;
     $endItem = $currentPage == 1 ? $itemPerPage : $currentPage * $itemPerPage;
     $trackingIndex = 1;

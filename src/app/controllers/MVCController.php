@@ -88,7 +88,6 @@ class MVCController{
 
         $originalPost = $this->mvcModal->get($id)['data'];
         if($originalPost){
-            var_dump('yes');
             Image::delete($originalPost[IMAGE]);
         }
         $data = $this->mvcModal->delete($_POST);

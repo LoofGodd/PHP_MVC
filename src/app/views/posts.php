@@ -21,19 +21,24 @@
    <div class="mt-3 d-flex flex-column row-gap-3">
       <?php
          $posts = $posts ?? [];
+         if(isset($posts['heading'])){
+          $tempPost = $posts;
+          unset($posts);
+          $posts[] = $tempPost;
+         }
          if (count($posts) == 0): ?>
       <h1>No Item Was found </h1>
       <?php else : ?>
       <?php
          $itemPerPage = 3;
-         [$currentPage, $totalPages, $previousPage, $nextPage, $startItem, $endItem, $showsPosts] = Helper::pagination($posts, $itemPerPage);
-         foreach ($showsPosts as $post_delete) {
-             if ($id == $post_delete[ID] && $action == 'edit') {
+         [$currentPage, $totalPages, $previousPage, $nextPage, $startItem, $endItem, $showPosts] = Helper::pagination($posts, $itemPerPage);
+         foreach ($showPosts as $showPost) {
+             if ($id == $showPost[ID] && $action == 'edit') {
                  require __DIR__ .'/components/edit.php';
              } else {
                  require __DIR__ .'/components/postItem.php';
              }
-         }
+            }
          ?>
    </div>
    <?php require __DIR__ . "/components/pagination.php" ?>
