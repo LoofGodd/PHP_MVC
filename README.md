@@ -1,30 +1,7 @@
-# MVC Assigement Project
-I built this website with PHP as  MVC Pattern to my teacher.
-# Setup 
-1. First Create a vhost. the DocumentRoot should be the absolute path. Example /**..AbsolutePath**/src
-2. Second Import the Database file into phpmyadmin
-3. start xampp and open your website.
-   
-**any problems** I have no idea. but guess if you know a little bit about Xampp you may not have any problem.
-
-note: I used xampp
-
-## Flow
-Client requests  a server with route. route choose the controller and controller controller View And Modal to show users. 
-## Features
-1. Route
-2. QueryParams Helper
-3. Image Helper
-4. CRUD
-## Requirements
-1. PHP 8
-2. Composer
-3. mysql
-   
-**You just need Composer if you are using Xampp(recomment), Lampp or Wampp**
-
 # MVC Assignment Project
 I have developed this website using the MVC pattern in PHP for my teacher.
+
+**[Demo]([https://www.example.com](https://youtu.be/Yum6ThUalzk))**
 
 # Setup
 1. Firstly, create a virtual host (vhost) with the DocumentRoot set to the absolute path of the project. For example, /..AbsolutePath/src.
